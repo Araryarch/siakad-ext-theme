@@ -7,7 +7,7 @@ Chrome Extension untuk merubah tampilan SIAKAD-ITS (akademik.its.ac.id) menjadi 
 1. Buka `chrome://extensions/`
 2. Nyalakan **Developer mode** (pojok kanan atas)
 3. Klik **Load unpacked**
-4. Pilih folder `akademik-its-theme`
+4. Pilih folder `siakad-ext-theme`
 5. Selesai
 
 ## Cara Pakai

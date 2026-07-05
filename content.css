@@ -1,0 +1,762 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Neobrutalism Blue Palette */
+  --its-blue: #3B82F6;
+  --its-blue-light: #60A5FA;
+  --its-blue-lighter: #DBEAFE;
+  --its-yellow: #FDE047;
+  --its-red: #EF4444;
+  --bg-primary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-sidebar: #FFFFFF;
+  --text-primary: #000000;
+  --text-secondary: #1E293B;
+  --border-color: #000000;
+  
+  /* Neobrutalism Essentials */
+  --border-width: 3px;
+  --shadow-sm: 3px 3px 0px #000000;
+  --shadow-md: 5px 5px 0px #000000;
+  --shadow-lg: 8px 8px 0px #000000;
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+}
+
+body {
+  margin: 0 !important;
+  background: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?q=80&w=2564&auto=format&fit=crop') center/cover fixed !important;
+  font-family: 'Space Grotesk', -apple-system, sans-serif !important;
+  color: var(--text-primary) !important;
+}
+
+#banner {
+  display: none !important;
+}
+
+/* Deleted body::before */
+
+/* -------------------------------------
+   NAVIGATION BAR (Awwwards Style)
+-------------------------------------- */
+form[name="fMenu"] {
+  background: transparent !important;
+  z-index: 1000 !important;
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1) !important;
+}
+
+form[name="fMenu"] > table {
+  background: transparent !important;
+  width: 100% !important;
+  max-width: none !important;
+  border-collapse: collapse !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 0 !important;
+}
+
+/* Row 1: Main Menu (The Pill) */
+form[name="fMenu"] > table > tbody {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  gap: 0 !important;
+}
+
+form[name="fMenu"] > table > tbody > tr:nth-child(1),
+form[name="fMenu"] > table > tbody > tr:nth-child(1) > td {
+  display: flex !important;
+  width: 100% !important;
+  background: #1e1e24 !important; /* Dark background from reference */
+}
+
+ul.jd_menu {
+  background: transparent !important;
+  border: none !important;
+  padding: 24px 48px !important; /* Thicker navbar padding */
+  margin: 0 auto !important;
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Generous spacing */
+  list-style: none;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: 100%;
+  max-width: 1200px;
+  overflow: visible !important;
+}
+
+ul.jd_menu > li {
+  position: relative;
+  margin: 0 !important;
+  border: none !important;
+  font-family: 'Inter', sans-serif !important;
+  display: flex !important;
+  align-items: center;
+  padding: 8px 12px !important;
+  color: #a1a1aa !important; /* Light grey text */
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  text-transform: none !important;
+  letter-spacing: 0.5px !important;
+  cursor: pointer;
+  background: transparent !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+ul.jd_menu > li > a,
+ul.jd_menu > li > a font,
+ul.jd_menu > li > font {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+ul.jd_menu > li:hover {
+  background: transparent !important;
+  color: #ffffff !important; /* White on hover */
+}
+
+/* Make the last item (Keluar) look like the teal button */
+ul.jd_menu > li:last-child {
+  background: #0ea5e9 !important; /* Teal blue */
+  color: #ffffff !important;
+  border-radius: 20px !important;
+  padding: 10px 28px !important;
+  margin-left: auto !important; /* pushes it to the right */
+}
+
+ul.jd_menu > li:last-child:hover {
+  background: #0284c7 !important;
+  transform: translateY(-1px);
+}
+
+ul.jd_menu img {
+  display: none !important;
+}
+
+/* Dropdown Carets */
+ul.jd_menu > li:has(> ul)::after {
+  content: '';
+  display: inline-block;
+  margin-left: 6px;
+  vertical-align: middle;
+  border-top: 5px solid currentColor;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+
+/* Make "Keluar" float right */
+ul.jd_menu > li:last-child {
+  margin-left: auto !important;
+}
+
+/* Row 2: Info Bar (Minimalist Style) */
+form[name="fMenu"] > table > tbody > tr:nth-child(2) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  gap: 16px !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  background: rgba(255,255,255,0.7) !important;
+  backdrop-filter: blur(24px) !important;
+  -webkit-backdrop-filter: blur(24px) !important;
+  padding: 12px 32px !important;
+  border-bottom: 1px solid rgba(255,255,255,0.4) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  width: 100% !important;
+  height: auto !important;
+  box-sizing: border-box;
+}
+
+form[name="fMenu"] > table > tbody > tr:nth-child(2) td {
+  background: transparent !important;
+  padding: 0 !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  color: #404040 !important;
+  display: block !important;
+  line-height: 1.5 !important;
+  border: none !important;
+}
+
+form[name="fMenu"] > table > tbody > tr:nth-child(2) td b {
+  color: #171717 !important;
+  font-weight: 600 !important;
+  background: transparent !important;
+  padding: 0 4px 0 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 0 !important;
+}
+
+/* Dropdown Sub-menus */
+ul.jd_menu ul {
+  background: #ffffff !important;
+  border: 1px solid #e5e5e5 !important;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+  padding: 8px 0 !important;
+  min-width: 220px !important;
+  z-index: 1001 !important;
+  margin-top: 4px !important;
+  opacity: 0;
+  transform: translateY(10px);
+  animation: dropdownFade 0.2s ease forwards;
+}
+
+@keyframes dropdownFade {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+ul.jd_menu ul li {
+  padding: 8px 16px !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #404040 !important;
+  border: none !important;
+  transition: all 0.1s ease;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  margin: 0 8px !important;
+  border-radius: 6px !important;
+}
+
+ul.jd_menu ul li:has(> ul)::after {
+  content: '';
+  display: inline-block;
+  margin-left: 8px;
+  border-left: 5px solid var(--text-primary);
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+
+ul.jd_menu ul li:hover {
+  background: var(--its-yellow) !important;
+  color: var(--text-primary) !important;
+}
+ul.jd_menu ul li:hover:has(> ul)::after {
+  border-left-color: var(--text-primary);
+}
+
+ul.jd_menu ul li a {
+  color: inherit !important;
+  text-decoration: none !important;
+  display: block;
+  flex-grow: 1;
+}/* -------------------------------------
+   INPUTS & SELECTS
+-------------------------------------- */
+select.comboSmallStyle, select, input {
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  padding: 6px 12px !important;
+  font-size: 13px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-weight: 500;
+  background: rgba(255,255,255,0.8) !important;
+  color: #404040 !important;
+  cursor: pointer;
+  outline: none;
+  border-radius: 6px !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05) !important;
+  transition: all 0.2s ease;
+}
+
+select.comboSmallStyle:focus, select:focus, input:focus {
+  transform: none !important;
+  border-color: #3b82f6 !important;
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.1) !important;
+  background: #ffffff !important;
+}
+
+  /* -------------------------------------
+     MAIN CONTENT AREA
+  -------------------------------------- */
+  div[align="center"] {
+    box-sizing: border-box !important;
+    padding: 80px 40px;
+    max-width: none !important;
+    width: 100% !important;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.85) !important; /* Luxury frosted glass */
+    backdrop-filter: blur(40px) !important;
+    -webkit-backdrop-filter: blur(40px) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.6) !important;
+  }
+  
+  div[align="center"] > table {
+    width: 100% !important;
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+  }
+
+div[align="center"] table table {
+  width: 100% !important;
+}
+
+div[align="center"] table table td[bgcolor="#C1C1C1"],
+div[align="center"] table table td[style*="background-image"] {
+  display: none !important;
+}
+
+  /* Main Content Box */
+  div[align="center"] table table td[colspan="3"] {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 24px 0 !important;
+    width: 100% !important;
+  }
+
+div[align="center"] table table td[colspan="3"] p,
+div[align="center"] table table td[colspan="3"] li,
+div[align="center"] table table td[colspan="3"] ol,
+div[align="center"] table table td[colspan="3"] ul {
+  font-family: 'Space Grotesk', sans-serif !important;
+  color: var(--text-primary) !important;
+  line-height: 1.7;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+div[align="center"] table table td[colspan="3"] a {
+  color: var(--its-blue) !important;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+div[align="center"] table table td[colspan="3"] strong {
+  color: #171717 !important;
+  background: transparent;
+  padding: 0;
+  font-weight: 600;
+}
+
+div[align="center"] > table > tbody > tr > td > img[src="images/selamatdatang.gif"] {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+  border: var(--border-width) solid var(--border-color);
+  box-shadow: var(--shadow-sm);
+}
+
+div[align="center"] h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #171717;
+  margin: 32px 0 24px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  display: block;
+}
+
+/* Modules Vertical List */
+div[style*="background-color:#efefef"] {
+  background: transparent !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 8px !important;
+  padding: 0 !important;
+}
+
+div[style*="background-color:#efefef"] > div[style*="background-color:#DFE3EB"] {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 2px solid var(--border-color) !important;
+  padding: 24px 0 8px 0 !important;
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: var(--text-secondary) !important;
+  margin-top: 16px;
+  box-shadow: none !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+div[style*="background-color:#efefef"] > p {
+  background: transparent !important;
+  border: none !important;
+  padding: 12px 16px !important;
+  margin: 0 !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+}
+
+div[style*="background-color:#efefef"] > p:hover {
+  background: rgba(0, 0, 0, 0.04) !important;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+div[style*="background-color:#efefef"] > p img {
+  display: none !important;
+}
+
+div[style*="background-color:#efefef"] > p a {
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  color: var(--text-primary) !important;
+  text-decoration: none !important;
+  display: block;
+  width: 100%;
+}
+
+div[style*="background-color:#efefef"] > p:hover a {
+  color: var(--its-blue) !important;
+}
+
+div[style*="background-color:#efefef"] > p a::before {
+  content: none;
+}
+
+/* -------------------------------------
+   MISC TABLES & FILTER BOXES
+-------------------------------------- */
+td[style*="font-family"] b {
+  color: var(--text-primary);
+}
+
+td[align="right"] b {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.badge1[data-badge]:after {
+  background: var(--its-red) !important;
+  border: 2px solid var(--border-color);
+  color: white;
+  font-weight: 800;
+  font-family: 'Space Grotesk', sans-serif !important;
+}
+
+td img[src*="left_corner"],
+td img[src*="right_corner"] {
+  display: none !important;
+}
+
+.PageTitle {
+  font-family: 'Space Grotesk', sans-serif !important;
+  font-size: 24px !important;
+  font-weight: 700 !important;
+  color: #09090b !important;
+  padding: 0 0 24px 0 !important;
+  text-transform: uppercase;
+  text-shadow: none !important;
+  letter-spacing: -0.5px !important;
+}
+
+.FilterBox {
+  background: transparent !important;
+  border: none !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  padding: 16px 24px !important;
+  margin: 0 !important;
+  width: 100% !important;
+  box-shadow: none !important;
+}
+
+.FilterBox td {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 500;
+  color: #09090b !important;
+  padding: 8px 12px !important;
+}
+
+.FilterBox strong {
+  color: #71717a !important;
+  font-weight: 500 !important;
+  background: transparent !important;
+  padding: 0;
+  border: none !important;
+}
+
+/* -------------------------------------
+   DATA TABLES (SHADCN UI LIGHT MODE)
+-------------------------------------- */
+/* 1. Outer Container (Wrap tables by semester using .semester-card JS grouping) */
+form[name="sipform"] {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  margin: 16px auto !important;
+  max-width: 1000px !important;
+}
+
+.semester-card,
+table.GridStyle {
+  background: #ffffff !important;
+  border: 1px solid #e5e7eb !important;
+  border-radius: 8px !important;
+  margin-bottom: 24px !important;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1) !important;
+  overflow: hidden !important;
+}
+
+/* Hide the <br>s that separate the tables inside the card */
+.semester-card > br,
+form[name="sipform"] > table.FilterBox + br,
+form[name="sipform"] > br,
+table.GridStyle + br {
+  display: none !important;
+}
+
+/* Remove margins/borders from the individual tables so they fuse together */
+.semester-card > table[cellpadding="4"],
+div[align="center"] > table[cellpadding="4"],
+table.GridStyle {
+  /* GridStyle already has border-radius and shadow from above, just need width */
+  width: 100% !important;
+  border-collapse: collapse !important;
+}
+
+/* 2. Top Header (Semester, etc.) */
+div[align="center"] table[cellpadding="4"] > tbody > tr > td[colspan="5"],
+table.GridStyle > tbody > tr:first-child > td {
+  background: transparent !important;
+  background-color: transparent !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  border-top: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  padding: 20px 24px 12px 24px !important;
+}
+
+/* Fix for list_mhsjadwal empty padding cells in the first row */
+table.GridStyle > tbody > tr:first-child > td:empty {
+  padding: 0 !important;
+}
+
+div[align="center"] table[cellpadding="4"] > tbody > tr > td[colspan="5"] b,
+table.GridStyle > tbody > tr:first-child > td {
+  color: #09090b !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0 !important;
+  text-transform: none !important;
+}
+
+table.GridStyle > tbody > tr:first-child > td font {
+  color: #09090b !important;
+  font-size: 15px !important;
+}
+
+div[align="center"] table[cellpadding="4"] > tbody > tr > td[colspan="5"] em {
+  color: #71717a !important;
+  font-size: 13px !important;
+  font-weight: 400 !important;
+  font-style: normal;
+  margin-left: 8px;
+}
+
+/* 3. Column Headers */
+div[align="center"] table[cellpadding="4"] > tbody > tr[style*="#ddd"],
+table.GridStyle > tbody > tr:nth-child(2) {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+
+div[align="center"] table[cellpadding="4"] > tbody > tr[style*="#ddd"] td,
+table.GridStyle > tbody > tr:nth-child(2) > td {
+  height: 48px !important;
+  padding: 0 16px !important;
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #71717a !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  border-top: none !important;
+  border-right: none !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+}
+
+div[align="center"] table[cellpadding="4"] > tbody > tr[style*="#ddd"] td b,
+table.GridStyle > tbody > tr:nth-child(2) > td b {
+  color: #71717a !important;
+  font-weight: 500 !important;
+}
+
+div[align="center"] table[cellpadding="4"] > tbody > tr[style*="#ddd"] td em {
+  display: none !important; /* Hide english translation in header for cleaner look */
+}
+
+/* 4. Data Rows */
+tr.NormalBG,
+tr.AlternateBG {
+  background: transparent !important;
+  background-color: transparent !important;
+  transition: background-color 0.15s ease !important;
+}
+
+tr.NormalBG:hover,
+tr.AlternateBG:hover {
+  background: #f3f4f6 !important;
+  background-color: #f3f4f6 !important;
+}
+
+/* OVERRIDE UGLY INLINE BG COLORS */
+tr.NormalBG td,
+tr.AlternateBG td {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 14px !important;
+  padding: 16px !important;
+  border-bottom: 1px solid #e5e7eb !important;
+  border-right: none !important;
+  color: #09090b !important;
+  font-weight: 400 !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  text-align: left !important;
+  vertical-align: middle !important;
+}
+
+/* Hide english translation in data rows for a cleaner Shadcn look */
+tr.NormalBG td em,
+tr.AlternateBG td em,
+tr.NormalBG td br,
+tr.AlternateBG td br,
+tr.AlternateBG td[align="right"][colspan="4"] em,
+tr.AlternateBG td[align="right"][colspan="4"] br,
+tr.AlternateBG td[align="right"][colspan="5"] em,
+tr.AlternateBG td[align="right"][colspan="5"] br {
+  display: none !important;
+}
+
+/* Center align number/status columns for consistency with data, with high specificity to override left alignment */
+form[name="sipform"] table td[width="100"]:not(:first-child),
+table.GridStyle > tbody > tr > td[width="100"]:not(:first-child),
+table.GridStyle > tbody > tr > td[width="40"],
+table.GridStyle > tbody > tr > td[width="50"] {
+  text-align: center !important;
+}
+
+/* Force table columns to stretch to the right edge by making the main text column flexible */
+form[name="sipform"] table td[width="350"],
+form[name="sipform"] table td[width="200"] {
+  width: 100% !important;
+}
+
+/* Strictly enforce widths for other columns so table-layout:auto perfectly aligns separate tables */
+form[name="sipform"] table td[width="100"] {
+  width: 100px !important;
+  min-width: 100px !important;
+  max-width: 100px !important;
+}
+form[name="sipform"] table td[width="40"] {
+  width: 40px !important;
+  min-width: 40px !important;
+  max-width: 40px !important;
+}
+form[name="sipform"] table td[width="50"] {
+  width: 50px !important;
+  min-width: 50px !important;
+  max-width: 50px !important;
+}
+
+/* Base table layout */
+form[name="sipform"] table[cellspacing="0"][cellpadding="4"],
+table.GridStyle {
+  table-layout: auto !important;
+  width: 100% !important;
+  max-width: 800px !important;
+  margin: 0 auto !important;
+}
+/* Ensure the footer table (which starts with colspan) has a fixed right column to align with S*N */
+form[name="sipform"] table[cellspacing="0"][cellpadding="4"]:has(td[colspan="4"]) td:last-child {
+  width: 100px !important;
+}
+
+/* 5. Total / Footer Rows */
+tr.AlternateBG td[align="right"][colspan="4"],
+tr.AlternateBG td[align="right"][colspan="5"],
+form[name="sipform"] table:has(td[colspan="4"]) tr.AlternateBG td[align="right"] {
+  background: transparent !important;
+  background-color: transparent !important;
+  text-align: right !important;
+  padding: 16px !important;
+  border-top: 1px solid #e5e7eb !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+  color: #09090b !important;
+}
+
+tr.AlternateBG td[align="right"][colspan="4"] strong,
+form[name="sipform"] table:has(td[colspan="4"]) tr.AlternateBG td[align="right"] strong {
+  font-weight: 500 !important;
+  text-transform: none !important;
+}
+
+/* Remove bottom border on absolute last row for rounded corners */
+table[cellpadding="4"]:last-child tr:last-child td {
+  border-bottom: none !important;
+}
+
+div[align="center"] > form[name="sipform"] {
+  background: transparent !important;
+}
+
+/* Hide original SIAKAD banners and siapad-header */
+#siapad-header,
+#banner, 
+img[src*="header.png"],
+img[src*="header"],
+img[src*="selamatdatang"] {
+  display: none !important;
+}
+
+/* Modern Announcement Card */
+  div[align="center"] > table[width="700"] {
+    background: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 60px !important;
+    max-width: 1000px !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+div[align="center"] > table[width="700"] td {
+  font-family: 'Inter', sans-serif !important;
+  font-size: 15px !important;
+  line-height: 1.7 !important;
+  color: #000000 !important;
+}
+
+/* Censor Mode Styles */
+body.siapad-censor-active .siapad-censor-target { filter: blur(6px); user-select: none; transition: filter 0.3s ease; }
+.siapad-censor-target { transition: filter 0.3s ease; }

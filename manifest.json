@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "SIAKAD-ITS Modern Theme",
+  "version": "1.0",
+  "description": "Modern UI untuk SIAKAD-ITS (akademik.its.ac.id)",
+  "permissions": ["storage"],
+  "host_permissions": ["https://akademik.its.ac.id/*"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "SIAKAD-ITS Theme"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://akademik.its.ac.id/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["content.css"],
+      "matches": ["https://akademik.its.ac.id/*"]
+    }
+  ]
+}
